@@ -1,0 +1,206 @@
+/* Importiamo il font Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111111; /* Colore di sfondo tendente al grigio scuro */
+    color: #fff;  /* Testo bianco come contrasto */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Allineamento al centro */
+}
+
+header {
+    width: 80%; /* Regolabile a seconda delle tue preferenze */
+    background-color: #222222; /* Un po' più chiaro dello sfondo per differenziarlo */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+section, footer {
+    width: 80%; /* Regolabile a seconda delle tue preferenze */
+    padding: 20px;
+    margin-top: 20px;
+    border: none;
+    align-content: center;
+    align-items: center
+}
+
+footer {
+    background-color: #222222; /* Analogamente all'header, un po' più chiaro dello sfondo */
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.showreel-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporzione 16:9 */
+    margin: 0 auto; /* Centra il contenitore */
+    max-width: 2000px; /* Larghezza massima dello showreel */
+    border-radius: 20px; /* Angoli smussati */
+    overflow: hidden;
+    margin-bottom: 20px; /* Spazio tra lo showreel e i videoclip */
+}
+
+.showreel-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Stili per i Videoclip */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Distanza tra i video */
+}
+
+.video-container {
+    position: relative;
+    width: calc(50% - 10px);
+    padding-bottom: 28.125%; /* Proporzione 16:9 */
+    border-radius: 10px; /* Angoli smussati */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.coccarde-wrapper img {
+    width: 500px; /* Imposta una larghezza fissa */
+    height: auto; /* Mantieni le proporzioni dell'immagine originale */
+    vertical-align: middle; /* Allinea verticalmente le coccarde */
+}
+
+
+.coccarde-wrapper img {
+    max-width: 170px; /* Puoi modificarlo in base alle dimensioni desiderate */
+    height: auto;
+}
+
+.stories-container {
+            display: flex;
+            justify-content: center;
+    border-radius: 10px;
+            gap: 10px;
+        }
+.story {
+            width: calc(20vw);
+            height: calc(35.6vw);
+            max-height: 90vh;
+            max-width: 50.625vh; /* 9/16 * 90vh */
+        }
+
+.fashionfilm-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporzione 16:9 */
+    margin: 0 auto; /* Centra il contenitore */
+    max-width: 2000px; /* Larghezza massima dello showreel */
+    border-radius: 20px; /* Angoli smussati */
+    overflow: hidden;
+    margin-bottom: 20px; /* Spazio tra lo showreel e i videoclip */
+}
+
+.fashionfilm-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.event-video-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne */
+    gap: 1rem;
+}
+
+.event-video-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    border-radius: 15px; /* Bordi smussati */
+}
+
+.event-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.affiliation {
+    text-align: center; /* Allinea al centro la scritta "Filmmaker presso" */
+    padding: 20px 0;    /* Spazio sopra e sotto l'elemento affiliation */
+    font-size: 30px;    /* Dimensione del testo */
+    font-weight: bold;  /* Peso del carattere */
+    color: white;       /* Colore del testo - sceglilo in base al tuo design */
+}
+
+.logos {
+    display: flex;
+    justify-content: center; /* Allinea gli elementi figli orizzontalmente al centro */
+    align-items: center;     /* Allinea gli elementi figli verticalmente al centro */
+    gap: 20px;               /* Distanza tra i loghi */
+}
+
+.logo1 {
+    width: 150px; /* Puoi cambiare questa dimensione per il primo logo */
+    height: 60px;
+}
+
+.logo2 {
+    width: 100px; /* Puoi cambiare questa dimensione per il secondo logo */
+    height: auto;
+}
+
+.bio-content {
+    display: flex;
+    align-items: flex-start; /* Allineamento orizzontale sul bordo superiore */
+    justify-content: center;
+    gap: 20px; /* Spazio tra l'immagine e il testo */
+}
+
+.bio-image img {
+    max-width: 500px; /* Puoi regolare questa dimensione in base alle tue necessità */
+    height: auto;
+}
+
+.bio-text {
+    max-width: 25%; /* Regolabile a seconda delle tue preferenze */
+    text-align: justify; /* Allinea il testo */
+}
+
+/* Se il tuo layout diventa troppo stretto su schermi piccoli, puoi utilizzare una media query per impilare immagine e testo verticalmente */
+@media (max-width: 768px) {
+    .bio-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bio-text {
+        max-width: 100%; 
+        text-align: left; /* o puoi mantenere 'justify' se preferisci */
+    }
+}
